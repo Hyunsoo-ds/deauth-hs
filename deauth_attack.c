@@ -116,7 +116,6 @@ void setRadioHdr(struct RadioHeader *p_rad){
 }
 
 void sendPacket(pcap_t *handle, struct DeauthFrame *p_bc){
-    //printf("BeaconFrame size: %ld \n", sizeof(struct BeaconFrame));
 
     if (pcap_sendpacket(handle,(const u_char *)p_bc, sizeof(struct DeauthFrame)) != 0)
     {
